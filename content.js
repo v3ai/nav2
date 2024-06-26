@@ -5,9 +5,9 @@ function injectCSS() {
   const style = document.createElement('style');
   style.textContent = `
     .keyboard-highlight {
-      outline: 2px solid #4285f4 !important;
-      box-shadow: 0 0 0 3px rgba(66, 133, 244, 0.3) !important;
-      background-color: rgba(66, 133, 244, 0.1) !important;
+      outline: 2px solid #282828 !important;
+      box-shadow: 0 0 0 3px rgba(40,40,40) !important;
+      background-color: rgba(40,40,40) !important;
     }
   `;
   document.head.appendChild(style);
