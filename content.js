@@ -78,6 +78,14 @@ function handleKeyPress(e) {
   }
 
   switch (e.key) {
+    case 'Enter':
+      if (currentIndex >= 0 && currentIndex < searchResults.length) {
+        const link = searchResults[currentIndex].querySelector('a');
+        if (link) {
+          window.open(link.href, "_self");
+        }
+      }
+      break;
     case 'j':
       highlightResult(Math.min(currentIndex + 1, searchResults.length - 1));
       break;
