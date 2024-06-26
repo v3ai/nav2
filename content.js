@@ -14,6 +14,8 @@ function injectCSS() {
   document.head.appendChild(style);
 }
 
+
+
 function removeUnwantedSections() {
   const sectionsToRemove = [
     // Images section
@@ -41,6 +43,9 @@ function removeUnwantedSections() {
     });
   });
 
+
+
+
   // Remove any remaining "People also ask" text
   document.querySelectorAll('div').forEach(el => {
     if (el.textContent.trim() === 'People also ask') {
@@ -54,7 +59,6 @@ let elementsToDelete = document.querySelectorAll('div.XVdSCb.KFFQ0c.xKf9F');
 elementsToDelete.forEach(element => {
     element.remove();
 });
-
 
 
 let elToDel = document.querySelectorAll('div.ULSxyf');
@@ -89,11 +93,12 @@ if (elementToDelete) {
   });
 
 
-
 }
 
+
+
 function initializeSearchResults() {
-  removeUnwantedSections();
+ removeUnwantedSections();
   searchResults.length = 0;
   document.querySelectorAll('.g:not(.g-blk)').forEach((result) => {
     // Only add if it's a main search result (has a cite element)
