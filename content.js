@@ -46,6 +46,30 @@ function removeUnwantedSections() {
       el.remove();
     }
   });
+
+let elementsToDelete = document.querySelectorAll('div.XVdSCb.KFFQ0c.xKf9F');
+
+// Iterate over each element and delete it
+elementsToDelete.forEach(element => {
+    element.remove();
+});
+
+  document.querySelectorAll('div').forEach(el => {
+    if (el.textContent.trim() === 'People also search for') {
+      el.remove();
+    }
+  });
+
+let elementToDelete = document.getElementById('bres');
+
+// Check if the element exists before attempting to delete it
+if (elementToDelete) {
+    // Remove the element from the DOM
+    elementToDelete.remove();
+} else {
+    console.log('Element with id "bres" not found.');
+}
+
 }
 
 function initializeSearchResults() {
