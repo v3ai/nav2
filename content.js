@@ -27,6 +27,7 @@ function removeUnwantedSections() {
     'div[jscontroller="HYSCof"]',
     // Any other sections with headers (like "Top stories", etc.)
     'g-section-with-header'
+
   ];
 
   sectionsToRemove.forEach(selector => {
@@ -54,6 +55,17 @@ elementsToDelete.forEach(element => {
     element.remove();
 });
 
+
+
+let elToDel = document.querySelectorAll('div.ULSxyf');
+
+// Iterate over each element and delete it
+elToDel.forEach(element => {
+    element.remove();
+});
+
+
+
   document.querySelectorAll('div').forEach(el => {
     if (el.textContent.trim() === 'People also search for') {
       el.remove();
@@ -69,6 +81,14 @@ if (elementToDelete) {
 } else {
     console.log('Element with id "bres" not found.');
 }
+
+  document.querySelectorAll('div').forEach(el => {
+    if (el.textContent.trim() === 'Things to know') {
+      el.remove();
+    }
+  });
+
+
 
 }
 
