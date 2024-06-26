@@ -8,6 +8,7 @@ function injectCSS() {
       outline: 2px solid #282828 !important;
       box-shadow: 0 0 0 3px rgba(40,40,40) !important;
       background-color: rgba(40,40,40) !important;
+      border-radius: 5px !important;
     }
   `;
   document.head.appendChild(style);
