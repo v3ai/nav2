@@ -14,8 +14,7 @@ function injectCSS() {
   document.head.appendChild(style);
 }
 
-
-
+/*
 function removeUnwantedSections() {
   const sectionsToRemove = [
     // Images section
@@ -94,11 +93,11 @@ if (elementToDelete) {
 
 
 }
-
+*/
 
 
 function initializeSearchResults() {
- removeUnwantedSections();
+ //removeUnwantedSections();
   searchResults.length = 0;
   document.querySelectorAll('.g:not(.g-blk)').forEach((result) => {
     // Only add if it's a main search result (has a cite element)
@@ -169,7 +168,7 @@ window.addEventListener('popstate', init);
 
 // Re-initialize results when new results are loaded dynamically
 const observer = new MutationObserver(() => {
-  removeUnwantedSections();
+ // removeUnwantedSections();
   initializeSearchResults();
 });
 observer.observe(document.body, { childList: true, subtree: true });
